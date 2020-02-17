@@ -1,0 +1,36 @@
+
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+.flex_1 {
+  flex: 1;
+}
+.flex_align_center {
+  align-items: center;
+}
+.flex_direction {
+  flex-direction: column;
+}
+.flex_justify_content {
+  justify-content: center;
+}
+.flex_justify_between {
+  justify-content: space-between;
+}
+
+
+/* 外层容器 */
+.van_container {
+  height: 100%;
+}
+.height_auto {
+  height: 100%;
+}
+.font_weight_500 {
+  font-weight: 500;
+}
+
+.padding_mudule {
+  padding: 0rem 0.32rem;
+}
