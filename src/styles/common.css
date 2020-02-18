@@ -79,6 +79,10 @@ body {
 .inlineBlockP > div{
     display:inline-block ;
 }
+.inlineBlockP_verTop > div{
+  display:inline-block ;
+  vertical-align: top;
+}
 .blockB_floatL{
   display: block;
   float: left;

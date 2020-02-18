@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="textAlignCenter_w100p">
       <el-button type="primary">提交</el-button>
       <el-button>重置</el-button>
     </div>
@@ -166,6 +166,9 @@ export default {
 </script>
 <style scoped>
 .MeetingBackground {
+}
+.MeetingBackground .mb_content {
+  margin-bottom: 30px;
 }
 .MeetingBackground .PerRow {
   width: 100%;

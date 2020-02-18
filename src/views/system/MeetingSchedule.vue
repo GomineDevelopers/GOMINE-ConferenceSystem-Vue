@@ -12,7 +12,9 @@
         @change="DateChoose($event,'test')"
       ></el-date-picker>
     </div>
-    <div>
+    <div :style="{height: '24px'}"></div>
+
+    <div class="ms_content">
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <template v-for="(item,index) in DateArr ">
           <el-tab-pane :key="index + 'date' " :label="item.date" :name="String(index)">
@@ -67,6 +69,11 @@
           </el-tab-pane>
         </template>
       </el-tabs>
+    </div>
+
+    <div class="textAlignCenter_w100p">
+      <el-button type="primary">提交</el-button>
+      <el-button>重置</el-button>
     </div>
   </div>
 </template>
@@ -312,6 +319,8 @@ export default {
 }
 .MeetingSchedule .perFont {
   font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 60px;
 }
 </style>
 

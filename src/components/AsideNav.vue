@@ -1,6 +1,8 @@
 <template>
   <el-row class="left_aside">
-    <el-row class="header_logo">LOGO</el-row>
+    <el-row class="header_logo">
+      <img class="img_logo" src="../assets/pic/logo.png" alt />
+    </el-row>
     <el-menu
       :default-active="$route.path"
       class="el-menu-vertical-demo"
@@ -121,6 +123,9 @@ export default {
 }
 </style>
 <style scoped>
+.img_logo {
+  width: 100%;
+}
 .left_aside {
   background: #fff;
   height: 100%;
