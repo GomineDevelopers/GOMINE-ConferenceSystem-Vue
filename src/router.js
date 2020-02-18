@@ -15,6 +15,7 @@ Vue.use(Router);
 // 讲师介绍 - LecturerIntroduction
 // 赞助商 - Sponsor
 // 会务日程 - ConferenceSchedule
+// 新增会务 - NewConference
 // 调查问卷 - Questionnaire
 // 资料下载 - DataDownload 
 // 联系我们 - ConnectUs 
@@ -82,6 +83,11 @@ export default new Router({
           path: "/conferenceschedule",
           name: "ConferenceSchedule",
           component: () => import("@/views/system/ConferenceSchedule")
+        },
+        {  // 
+          path: "/newconference",
+          name: "NewConference",
+          component: () => import("@/views/system/NewConference")
         },
         {
           path: "/questionnaire",

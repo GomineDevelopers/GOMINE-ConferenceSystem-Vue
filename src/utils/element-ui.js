@@ -21,7 +21,9 @@ import {
     DatePicker,
     Tabs,
     TabPane,
-    TimePicker
+    TimePicker,
+    Upload,
+    Notification 
 } from "element-ui";
 Vue.use(Button);
 Vue.use(Input);
@@ -45,3 +47,6 @@ Vue.use(DatePicker);
 Vue.use(Tabs);
 Vue.use(TabPane);
 Vue.use(TimePicker);
+Vue.use(Upload);
+
+Vue.prototype.$notify = Notification;

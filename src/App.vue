@@ -36,8 +36,10 @@ export default {
   color: #41485d;
   height: 100%;
   /* font-size: 1rem; */
-  font-size: 28px;
+  /* font-size: 28px; */
   /* width: 7.5rem; */
+  font-size: 14px;
+
 }
 
 </style>

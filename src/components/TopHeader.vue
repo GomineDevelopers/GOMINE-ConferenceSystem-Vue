@@ -1,7 +1,7 @@
 <template>
-  <el-row class="top_header">
+  <el-row class="TopHeader top_header">
     <el-row class="header_top">
-      <div class="textAlignCenter_w100p">会务系统生成后台设置系统</div>
+      <div class="textAlignCenter_w100p SystemTitle">会务系统生成后台设置系统</div>
       <!-- 
       <span>
         <img src="https://img.yzcdn.cn/vant/cat.jpeg" />
@@ -88,5 +88,10 @@ export default {
 }
 .logout_btn:hover {
   color: #409eff;
+}
+
+.TopHeader .SystemTitle {
+  font-size: 32px;
+  font-weight: bold;
 }
 </style>

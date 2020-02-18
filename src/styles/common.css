@@ -83,6 +83,10 @@ body {
   display: block;
   float: left;
 }
+.inlineBlock_verTop{
+  display:inline-block ;
+  vertical-align: top;
+}
 
 .verticalAlignTop{
   vertical-align: top;
