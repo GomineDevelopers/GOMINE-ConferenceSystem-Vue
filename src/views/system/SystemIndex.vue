@@ -1,5 +1,5 @@
 <template>
-  <el-row class="height_auto flex">
+  <el-row class="system_index height_auto flex">
     <el-row class="children_nav height_auto">
       <el-menu :default-active="$route.path" router class="el-menu-vertical-demo height_auto">
         <el-menu-item index="/allsetting">
@@ -69,7 +69,7 @@
         </el-menu-item>
       </el-menu>
     </el-row>
-    <el-row class="system_bdy">
+    <el-row class="system_bdy height_auto flex_1">
       <router-view />
     </el-row>
   </el-row>
@@ -84,9 +84,13 @@ export default {
 };
 </script>
 <style scoped>
+.system_index {
+  overflow: hidden;
+}
 .children_nav {
   width: 200px;
 }
-.SystemIndex {
+.system_bdy {
+  overflow-y: auto;
 }
 </style>
