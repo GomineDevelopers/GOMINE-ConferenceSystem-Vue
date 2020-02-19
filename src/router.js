@@ -22,19 +22,21 @@ Vue.use(Router);
 // 个人中心 - PersonalCenter
 // 报表 - ReportForms
 
-
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
-
     {
       path: "/test",
       name: "Test",
       component: () => import("@/views/Test")
     },
 
-    { path: "/404", name: "NotFound404", component: () => import("@/views/NotFound404") },
+    {
+      path: "/404",
+      name: "NotFound404",
+      component: () => import("@/views/NotFound404")
+    },
     { path: "*", redirect: "/404" },
     // ********* system
     {
@@ -49,77 +51,90 @@ export default new Router({
           component: () => import("@/views/MettingList")
         },
         {
-          path: "/globalsettings",
-          name: "GlobalSettings",
-          component: () => import("@/views/system/GlobalSettings")
-        },
-        {
-          path: "/login",
-          name: "Login",
-          component: () => import("@/views/system/Login")
-        },
-        {
-          path: "/mainmenu",
-          name: "MainMenu",
-          component: () => import("@/views/system/MainMenu")
-        },
-        {
-          path: "/meetingbackground",
-          name: "MeetingBackground",
-          component: () => import("@/views/system/MeetingBackground")
-        },
-        {
-          path: "/meetingschedule",
-          name: "MeetingSchedule",
-          component: () => import("@/views/system/MeetingSchedule")
-        },
-        {
-          path: "/lecturerintroduction",
-          name: "LecturerIntroduction",
-          component: () => import("@/views/system/LecturerIntroduction")
-        },
-        {
-          path: "/sponsor",
-          name: "Sponsor",
-          component: () => import("@/views/system/Sponsor")
-        },
-        {
-          path: "/conferenceschedule",
-          name: "ConferenceSchedule",
-          component: () => import("@/views/system/ConferenceSchedule")
-        },
-        {  //
-          path: "/newconference",
-          name: "NewConference",
-          component: () => import("@/views/system/NewConference")
-        },
-        {
-          path: "/questionnaire",
-          name: "Questionnaire",
-          component: () => import("@/views/system/Questionnaire")
-        },
-        {
-          path: "/datadownload",
-          name: "DataDownload",
-          component: () => import("@/views/system/DataDownload")
-        },
-        {
-          path: "/connectus",
-          name: "ConnectUs",
-          component: () => import("@/views/system/ConnectUs")
-        },
-        {
-          path: "/personalcenter",
-          name: "PersonalCenter",
-          component: () => import("@/views/system/PersonalCenter")
-        },
-        {
-          path: "/reportforms",
-          name: "ReportForms",
-          component: () => import("@/views/system/ReportForms")
-        },
+          path: "/systemindex",
+          name: "SystemIndex",
+          component: () => import("@/views/system/SystemIndex"),
+          redirect: "/allsetting",
+          children: [
+            {
+              path: "/allsetting",
+              name: "AllSetting",
+              component: () => import("@/views/system/AllSetting")
+            },
+            {
+              path: "/globalsettings",
+              name: "GlobalSettings",
+              component: () => import("@/views/system/GlobalSettings")
+            },
+            {
+              path: "/login",
+              name: "Login",
+              component: () => import("@/views/system/Login")
+            },
+            {
+              path: "/mainmenu",
+              name: "MainMenu",
+              component: () => import("@/views/system/MainMenu")
+            },
+            {
+              path: "/meetingbackground",
+              name: "MeetingBackground",
+              component: () => import("@/views/system/MeetingBackground")
+            },
+            {
+              path: "/meetingschedule",
+              name: "MeetingSchedule",
+              component: () => import("@/views/system/MeetingSchedule")
+            },
+            {
+              path: "/lecturerintroduction",
+              name: "LecturerIntroduction",
+              component: () => import("@/views/system/LecturerIntroduction")
+            },
+            {
+              path: "/sponsor",
+              name: "Sponsor",
+              component: () => import("@/views/system/Sponsor")
+            },
+            {
+              path: "/conferenceschedule",
+              name: "ConferenceSchedule",
+              component: () => import("@/views/system/ConferenceSchedule")
+            },
+            {
+              //
+              path: "/newconference",
+              name: "NewConference",
+              component: () => import("@/views/system/NewConference")
+            },
+            {
+              path: "/questionnaire",
+              name: "Questionnaire",
+              component: () => import("@/views/system/Questionnaire")
+            },
+            {
+              path: "/datadownload",
+              name: "DataDownload",
+              component: () => import("@/views/system/DataDownload")
+            },
+            {
+              path: "/connectus",
+              name: "ConnectUs",
+              component: () => import("@/views/system/ConnectUs")
+            },
+            {
+              path: "/personalcenter",
+              name: "PersonalCenter",
+              component: () => import("@/views/system/PersonalCenter")
+            },
+            {
+              path: "/reportforms",
+              name: "ReportForms",
+              component: () => import("@/views/system/ReportForms")
+            }
+          ]
+        }
       ]
-    },
-
+    }
   ]
 });

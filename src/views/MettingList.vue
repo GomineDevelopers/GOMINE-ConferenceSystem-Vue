@@ -15,7 +15,7 @@
       <el-table-column label="操作" fixed="right" width="100">
         <template slot-scope="scope">
           <el-tooltip class="item" effect="dark" content="编辑" placement="top">
-            <i class="el-icon-edit-outline edit"></i>
+            <i class="el-icon-edit-outline edit" @click="goIndex(scope.row)"></i>
           </el-tooltip>
           <el-tooltip class="item" effect="dark" content="删除" placement="top">
             <i class="el-icon-delete delete"></i>
@@ -64,7 +64,11 @@ export default {
       ]
     };
   },
-  methods: {}
+  methods: {
+    goIndex(row) {
+      this.$router.replace("/systemindex");
+    }
+  }
 };
 </script>
 <style>
