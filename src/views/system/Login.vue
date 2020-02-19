@@ -2,29 +2,29 @@
   <div class="Login">
     <vue-headful title="登录"></vue-headful>
     <div class="GS_content">
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">LOGO位置：</div>
-        <div class="inlineBlock_verTop pr_content">
-          <div class="choosemodule_P">
+      <div class="perRowCom">
+        <div class="pr_titleCom">LOGO位置：</div>
+        <div class="pr_contentCom">
+          <div class="choosemodule_PCom">
             <template v-for="(item1,index1) in LogoPosition ">
               <div
                 @click="ChooseStatusChange('lp',index1,true,item1.Aid)"
                 v-if="!item1.ifChoose"
                 :key="index1 + 'lp' "
-                class="choosemodule"
+                class="choosemoduleCom choosemodule3Com"
               >{{item1.text}}</div>
               <div
                 v-if="item1.ifChoose"
                 :key="index1 + 'lp' "
-                class="choosemodule choosemodule2"
+                class="choosemoduleCom choosemodule2Com choosemodule3Com"
               >{{item1.text}}</div>
             </template>
           </div>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">会议LOGO：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">会议LOGO：</div>
+        <div class="pr_contentCom">
           <el-upload
             class="avatar-uploader"
             :show-file-list="false"
@@ -41,29 +41,29 @@
         </div>
       </div>
 
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">登录验证方式：</div>
-        <div class="inlineBlock_verTop pr_content">
-          <div class="choosemodule_P">
+      <div class="perRowCom">
+        <div class="pr_titleCom">登录验证方式：</div>
+        <div class="pr_contentCom">
+          <div class="choosemodule_PCom">
             <template v-for="(item2,index2) in LoginVerificationMethod ">
               <div
                 @click="ChooseStatusChange('lvm',index2,true,item2.Aid)"
                 v-if="!item2.ifChoose"
                 :key="index2 + 'lvm' "
-                class="choosemodule"
+                class="choosemoduleCom choosemodule3Com"
               >{{item2.text}}</div>
               <div
                 v-if="item2.ifChoose"
                 :key="index2 + 'lvm' "
-                class="choosemodule choosemodule2"
+                class="choosemoduleCom choosemodule2Com choosemodule3Com"
               >{{item2.text}}</div>
             </template>
           </div>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">会议KV：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">会议KV：</div>
+        <div class="pr_contentCom">
           <el-upload
             class="avatar-uploader"
             :show-file-list="false"
@@ -79,75 +79,94 @@
           </el-upload>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">登录框样式：</div>
-        <div class="inlineBlock_verTop pr_content">
-          <div class="choosemodule_P">
+      <div class="perRowCom">
+        <div class="pr_titleCom">登录框样式：</div>
+        <div class="pr_contentCom">
+          <div class="choosemodule_PCom">
             <template v-for="(item3,index3) in LoginBoxStyle ">
               <div
                 @click="ChooseStatusChange('lbs',index3,true,item3.Aid)"
                 v-if="!item3.ifChoose"
                 :key="index3 + 'lbs' "
-                class="choosemodule"
+                class="choosemoduleCom choosemodule3Com"
               >{{item3.text}}</div>
               <div
                 v-if="item3.ifChoose"
                 :key="index3 + 'lbs' "
-                class="choosemodule choosemodule2"
+                class="choosemoduleCom choosemodule2Com choosemodule3Com"
               >{{item3.text}}</div>
             </template>
           </div>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">登录框颜色：</div>
-        <div class="inlineBlock_verTop pr_content">
-          <el-input v-model="LoginBoxColor" placeholder="请输入颜色"></el-input>示例：#ffffff 、rgb(0,0,0) 、rgba(0,0,0,0)
+      <div class="perRowCom">
+        <div class="pr_titleCom">登录框颜色：</div>
+        <div class="pr_contentCom pr_content2">
+          <div class="inlineBlock_verTop">
+            <el-color-picker v-model="LoginBoxColor"></el-color-picker>
+          </div>
+          <div class="inlineBlock_verTop">
+            <el-input class="m_color" v-model="LoginBoxColor" placeholder="请选择或输入颜色"></el-input>
+          </div>
+          <div>
+            <span>示例：#ffffff 、rgb(0,0,0) 、rgba(0,0,0,0)</span>
+          </div>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">登录按钮样式：</div>
-        <div class="inlineBlock_verTop pr_content">
-          <div class="choosemodule_P">
+      <div class="perRowCom">
+        <div class="pr_titleCom">登录按钮样式：</div>
+        <div class="pr_contentCom">
+          <div class="choosemodule_PCom">
             <template v-for="(item4,index4) in LoginButtonStyle ">
               <div
                 @click="ChooseStatusChange('lbus',index4,true,item4.Aid)"
                 v-if="!item4.ifChoose"
                 :key="index4 + 'lbus' "
-                class="choosemodule"
+                class="choosemoduleCom choosemodule3Com"
               >{{item4.text}}</div>
               <div
                 v-if="item4.ifChoose"
                 :key="index4 + 'lbus' "
-                class="choosemodule choosemodule2"
+                class="choosemoduleCom choosemodule2Com choosemodule3Com"
               >{{item4.text}}</div>
             </template>
           </div>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">登录按钮颜色：</div>
-        <div class="inlineBlock_verTop pr_content">
-          <el-input v-model="LoginBtnColor" placeholder="请输入颜色"></el-input>示例：#ffffff 、rgb(0,0,0) 、rgba(0,0,0,0)
+      <div class="perRowCom">
+        <div class="pr_titleCom">登录按钮颜色：</div>
+        <div class="pr_contentCom pr_content2">
+          <div class="inlineBlock_verTop">
+            <el-color-picker v-model="LoginBtnColor"></el-color-picker>
+          </div>
+          <div class="inlineBlock_verTop">
+            <el-input class="m_color" v-model="LoginBtnColor" placeholder="请选择或输入颜色"></el-input>
+          </div>
+          <div>
+            <span>示例：#ffffff 、rgb(0,0,0) 、rgba(0,0,0,0)</span>
+          </div>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">会议开始时间：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">会议开始时间：</div>
+        <div class="pr_contentCom">
           <el-date-picker v-model="date_start" type="date" placeholder="选择日期"></el-date-picker>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">会议地点：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">会议地点：</div>
+        <div class="pr_contentCom">
           <el-input v-model="meeting_address" placeholder="请输入会议地点"></el-input>
         </div>
       </div>
     </div>
 
-    <div class="textAlignCenter_w100p">
-      <el-button type="primary">提交</el-button>
-      <el-button>重置</el-button>
+    <div :style="{height: '80px'}"></div>
+    <div class="flex_submit_p">
+      <div class="flex_submit">
+        <el-button class="btn_submit" type="primary">提交</el-button>
+        <el-button>重置</el-button>
+      </div>
     </div>
   </div>
 </template>
@@ -337,38 +356,17 @@ export default {
   bottom: 0;
   left: 25%;
   width: 50%;
+  color: #c5c9d7;
 }
 </style>
 <style scoped>
 .Login {
 }
-.Login .perRow {
-  margin-bottom: 30px;
+.Login .pr_content2 {
+  width: 500px;
 }
-.Login .pr_title {
-  width: 150px;
-  text-align: right;
-}
-.Login .pr_content {
-  width: 300px;
-}
-
-.Login .choosemodule_P {
-  width: 340px;
-}
-.Login .choosemodule {
-  border: 1px solid #333333;
-  display: inline-block;
-  width: 100px;
-  text-align: center;
-  cursor: pointer;
-  height: 40px;
-  line-height: 40px;
-  margin: 0 10px 5px 0px;
-}
-.Login .choosemodule2 {
-  border: 1px solid #1890ff;
-  color: #1890ff;
+.Login .m_color.el-input {
+  width: 230px;
 }
 </style>
 
