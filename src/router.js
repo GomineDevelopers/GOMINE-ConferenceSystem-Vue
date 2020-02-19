@@ -8,7 +8,7 @@ Vue.use(Router);
 // 首页 - Home(/)
 
 // 整体设置 - GlobalSettings
-// 登录 - Login
+// 登录页 - Login
 // 首页 - MainMenu
 // 会议背景 - MeetingBackground
 // 会议日程 - MeetingSchedule
@@ -58,73 +58,73 @@ export default new Router({
           children: [
             {
               path: "/globalsettings",
-              name: "GlobalSettings",
+              name: "整体设置",
               component: () => import("@/views/system/GlobalSettings")
             },
             {
               path: "/login",
-              name: "Login",
+              name: "登录页",
               component: () => import("@/views/system/Login")
             },
             {
               path: "/mainmenu",
-              name: "MainMenu",
+              name: "首页",
               component: () => import("@/views/system/MainMenu")
             },
             {
               path: "/meetingbackground",
-              name: "MeetingBackground",
+              name: "会议背景",
               component: () => import("@/views/system/MeetingBackground")
             },
             {
               path: "/meetingschedule",
-              name: "MeetingSchedule",
+              name: "会议日程",
               component: () => import("@/views/system/MeetingSchedule")
             },
             {
               path: "/lecturerintroduction",
-              name: "LecturerIntroduction",
+              name: "讲师介绍",
               component: () => import("@/views/system/LecturerIntroduction")
             },
             {
               path: "/sponsor",
-              name: "Sponsor",
+              name: "赞助商",
               component: () => import("@/views/system/Sponsor")
             },
             {
               path: "/conferenceschedule",
-              name: "ConferenceSchedule",
+              name: "会务日程",
               component: () => import("@/views/system/ConferenceSchedule")
             },
             {
               //
               path: "/newconference",
-              name: "NewConference",
+              name: "新增会务",
               component: () => import("@/views/system/NewConference")
             },
             {
               path: "/questionnaire",
-              name: "Questionnaire",
+              name: "调查问卷",
               component: () => import("@/views/system/Questionnaire")
             },
             {
               path: "/datadownload",
-              name: "DataDownload",
+              name: "资料下载",
               component: () => import("@/views/system/DataDownload")
             },
             {
               path: "/connectus",
-              name: "ConnectUs",
+              name: "联系我们",
               component: () => import("@/views/system/ConnectUs")
             },
             {
               path: "/personalcenter",
-              name: "PersonalCenter",
+              name: "个人中心",
               component: () => import("@/views/system/PersonalCenter")
             },
             {
               path: "/reportforms",
-              name: "ReportForms",
+              name: "报表",
               component: () => import("@/views/system/ReportForms")
             }
           ]

@@ -186,6 +186,7 @@ export default {
   bottom: 0;
   left: 10%;
   width: 80%;
+  color: #C5C9D7;
 }
 .LecturerIntroduction .el-icon-plus:before {
   position: absolute;

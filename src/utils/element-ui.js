@@ -26,7 +26,8 @@ import {
   Notification,
   Table,
   TableColumn,
-  Tooltip
+  Tooltip,
+  ColorPicker
 } from "element-ui";
 Vue.use(Button);
 Vue.use(Input);
@@ -54,5 +55,5 @@ Vue.use(Upload);
 Vue.use(Table);
 Vue.use(TableColumn);
 Vue.use(Tooltip);
-
 Vue.prototype.$notify = Notification;
+Vue.use(ColorPicker);

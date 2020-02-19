@@ -2,29 +2,29 @@
   <div class="MainMenu">
     <vue-headful title="登录"></vue-headful>
     <div class="GS_content">
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">LOGO位置：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">LOGO位置：</div>
+        <div class="pr_contentCom">
           <div class="choosemodule_P">
             <template v-for="(item1,index1) in LogoPosition ">
               <div
                 @click="ChooseStatusChange('lp',index1,true,item1.Aid)"
                 v-if="!item1.ifChoose"
                 :key="index1 + 'lp' "
-                class="choosemodule"
+                class="choosemoduleCom choosemodule3Com"
               >{{item1.text}}</div>
               <div
                 v-if="item1.ifChoose"
                 :key="index1 + 'lp' "
-                class="choosemodule choosemodule2"
+                class="choosemoduleCom choosemodule2Com choosemodule3Com"
               >{{item1.text}}</div>
             </template>
           </div>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">头图：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">头图：</div>
+        <div class="pr_contentCom">
           <el-upload
             class="avatar-uploader"
             :show-file-list="false"
@@ -41,29 +41,29 @@
         </div>
       </div>
 
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">九（六）宫格样式：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">宫格样式：</div>
+        <div class="pr_contentCom">
           <div class="choosemodule_P">
             <template v-for="(item2,index2) in SudokuStyle ">
               <div
                 @click="ChooseStatusChange('ss',index2,true,item2.Aid)"
                 v-if="!item2.ifChoose"
                 :key="index2 + 'ss' "
-                class="choosemodule"
+                class="choosemoduleCom choosemodule3Com"
               >{{item2.text}}</div>
               <div
                 v-if="item2.ifChoose"
                 :key="index2 + 'ss' "
-                class="choosemodule choosemodule2"
+                class="choosemoduleCom choosemodule2Com choosemodule3Com"
               >{{item2.text}}</div>
             </template>
           </div>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">首页背景：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">首页背景：</div>
+        <div class="pr_contentCom">
           <el-upload
             class="avatar-uploader"
             :show-file-list="false"
@@ -80,17 +80,20 @@
         </div>
       </div>
 
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">会议地点：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">会议地点：</div>
+        <div class="pr_contentCom">
           <el-input v-model="meeting_address" placeholder="请输入会议地点"></el-input>
         </div>
       </div>
     </div>
 
-    <div class="textAlignCenter_w100p">
-      <el-button type="primary">提交</el-button>
-      <el-button>重置</el-button>
+    <div :style="{height: '80px'}"></div>
+    <div class="flex_submit_p">
+      <div class="flex_submit">
+        <el-button class="btn_submit" type="primary">提交</el-button>
+        <el-button>重置</el-button>
+      </div>
     </div>
   </div>
 </template>
@@ -261,38 +264,11 @@ export default {
   bottom: 0;
   left: 25%;
   width: 50%;
+  color: #c5c9d7;
 }
 </style>
 <style scoped>
 .MainMenu {
-}
-.MainMenu .perRow {
-  margin-bottom: 30px;
-}
-.MainMenu .pr_title {
-  width: 150px;
-  text-align: right;
-}
-.MainMenu .pr_content {
-  width: 300px;
-}
-
-.MainMenu .choosemodule_P {
-  width: 340px;
-}
-.MainMenu .choosemodule {
-  border: 1px solid #333333;
-  display: inline-block;
-  width: 100px;
-  text-align: center;
-  cursor: pointer;
-  height: 40px;
-  line-height: 40px;
-  margin: 0 10px 5px 0px;
-}
-.MainMenu .choosemodule2 {
-  border: 1px solid #1890ff;
-  color: #1890ff;
 }
 </style>
 

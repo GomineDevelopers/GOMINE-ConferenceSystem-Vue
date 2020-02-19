@@ -36,6 +36,9 @@ export default {
   methods: {}
 };
 </script>
+<style >
+
+</style>
 <style scoped>
 .Home {
   height: 100%;
@@ -44,12 +47,14 @@ export default {
 .el-aside,
 .el-container {
   height: 100%;
-  background: #f9f9f9;
+  background: #f4f7fd;
 }
 .el-main {
   background: #fff;
   margin: 20px;
   padding: 0;
+  margin-bottom: 0px;
+
 }
 </style>
 

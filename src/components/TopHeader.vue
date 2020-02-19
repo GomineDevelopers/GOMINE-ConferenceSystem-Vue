@@ -6,7 +6,8 @@
         <i class="el-icon-arrow-down iconSize"></i>
       </span>
       <span class="logout_btn" @click="logout" title="退出登录">
-        <i class="el-icon-setting iconSize"></i>退出
+        <i class="el-icon-setting i_settings exit_font"></i>
+        <span class="exit_font">退出</span>
       </span>
     </el-row>
   </el-row>
@@ -49,26 +50,22 @@ export default {
 };
 </script>
 <style>
-.el-header{
-  padding:0;
+.el-header {
+  padding: 0;
 }
 </style>
 <style scoped>
-
-.iconSize {
-  font-size: 0.12rem;
-}
 .top_header {
   background-color: #fff;
   line-height: 60px;
 }
 .header_top {
   height: 60px;
-  padding-right:40px;
+  padding-right: 40px;
   display: -webkit-flex;
   display: flex;
   justify-content: flex-end;
-  box-shadow:0px 1px 0px rgba(149,165,186,0.2);
+  box-shadow: 0px 1px 0px rgba(149, 165, 186, 0.2);
 }
 .header_top span {
   height: 60px;
@@ -80,8 +77,8 @@ export default {
   margin-right: 20px;
 }
 .header_top img {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -96,5 +93,14 @@ export default {
 .TopHeader .SystemTitle {
   font-size: 32px;
   font-weight: bold;
+}
+.i_settings {
+  margin-top: 3px;
+  margin-right: 5px;
+}
+.exit_font {
+  height: 20px;
+  line-height: 20px;
+  font-size: 20px;
 }
 </style>

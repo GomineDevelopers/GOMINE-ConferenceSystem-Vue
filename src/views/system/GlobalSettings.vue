@@ -2,62 +2,62 @@
   <div class="GlobalSettings">
     <vue-headful title="整体设置"></vue-headful>
     <div class="GS_content">
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">会议地址：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">会议地址：</div>
+        <div class="pr_contentCom">
           <div class="metting_address">{{metting_address}}</div>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">会议规格：</div>
-        <div class="inlineBlock_verTop pr_content">
-          <div class="choosemodule_P">
+      <div class="perRowCom">
+        <div class="pr_titleCom">会议规格：</div>
+        <div class="pr_contentCom">
+          <div class="choosemodule_PCom">
             <template v-for="(item2,index2) in MeetingSecifications ">
               <div
                 @click="ChooseStatusChange('ms',index2,true,item2.Aid)"
                 v-if="!item2.ifChoose"
                 :key="index2 + 'ms' "
-                class="choosemodule"
+                class="choosemoduleCom choosemodule3Com"
               >{{item2.text}}</div>
               <!-- <div
                 @click="ChooseStatusChange('ms',index2,false,item2.Aid)"
                 v-if="item2.ifChoose"
                 :key="index2 + 'ms' "
-                class="choosemodule choosemodule2"
+                class="choosemoduleCom choosemodule2Com"
               >{{item2.text}}</div>-->
               <div
                 v-if="item2.ifChoose"
                 :key="index2 + 'ms' "
-                class="choosemodule choosemodule2"
+                class="choosemoduleCom choosemodule2Com choosemodule3Com"
               >{{item2.text}}</div>
             </template>
           </div>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">{{SudokuContentText}}内容：</div>
-        <div class="inlineBlock_verTop pr_content">
-          <div class="choosemodule_P">
+      <div class="perRowCom">
+        <div class="pr_titleCom">{{SudokuContentText}}内容：</div>
+        <div class="pr_contentCom">
+          <div class="choosemodule_PCom">
             <template v-for="(item3,index3) in SudokuContent ">
               <div
                 @click="ChooseStatusChange('sc',index3,true)"
                 v-if="!item3.ifChoose"
                 :key="index3 + 'sc' "
-                class="choosemodule"
+                class="choosemoduleCom"
               >{{item3.text}}</div>
               <div
                 @click="ChooseStatusChange('sc',index3,false)"
                 v-if="item3.ifChoose"
                 :key="index3 + 'sc' "
-                class="choosemodule choosemodule2"
+                class="choosemoduleCom choosemodule2Com"
               >{{item3.text}}</div>
             </template>
           </div>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">LOGO：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">LOGO：</div>
+        <div class="pr_contentCom">
           <el-upload
             class="avatar-uploader"
             :show-file-list="false"
@@ -73,9 +73,9 @@
           </el-upload>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">会议背景（整体）：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">会议背景（整体）：</div>
+        <div class="pr_contentCom">
           <el-upload
             class="avatar-uploader"
             :show-file-list="false"
@@ -91,9 +91,9 @@
           </el-upload>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">正文字号（整体）：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">正文字号（整体）：</div>
+        <div class="pr_contentCom">
           <el-select v-model="mainContentFont" placeholder="正文字号（整体）">
             <el-option
               v-for="itemMCF in options_mainContentFont"
@@ -104,9 +104,9 @@
           </el-select>
         </div>
       </div>
-      <div class="perRow">
-        <div class="inlineBlock_verTop pr_title">标题字号（整体）：</div>
-        <div class="inlineBlock_verTop pr_content">
+      <div class="perRowCom">
+        <div class="pr_titleCom">标题字号（整体）：</div>
+        <div class="pr_contentCom">
           <el-select v-model="mainTitleFont" placeholder="标题字号（整体）">
             <el-option
               v-for="itemMTF in options_mainTitleFont"
@@ -118,10 +118,15 @@
         </div>
       </div>
     </div>
-    <div class="textAlignCenter_w100p">
-      <el-button type="primary">提交</el-button>
-      <el-button>重置</el-button>
+
+    <div :style="{height: '80px'}"></div>
+    <div class="flex_submit_p">
+      <div class="flex_submit">
+        <el-button class="btn_submit" type="primary">提交</el-button>
+        <el-button>重置</el-button>
+      </div>
     </div>
+
   </div>
 </template>
 <script>
@@ -383,26 +388,12 @@ export default {
   bottom: 0;
   left: 25%;
   width: 50%;
+  color: #C5C9D7;
 }
 </style>
 <style scoped>
 .GlobalSettings {
-}
-.GlobalSettings .perRow {
-  margin-bottom: 16px;
-}
-.GlobalSettings .pr_title {
-  width: 150px;
-  /* text-align: right; */
-
-  height: 20px;
-  font-size: 14px;
-  font-family: PingFangTC;
-  line-height: 20px;
-  color: rgba(17, 26, 52, 1);
-}
-.GlobalSettings .pr_content {
-  width: 300px;
+  width: 100%;
 }
 .GlobalSettings .metting_address {
   height: 20px;
@@ -411,22 +402,7 @@ export default {
   line-height: 20px;
   color: rgba(149, 165, 186, 1);
 }
-.GlobalSettings .choosemodule_P {
-  width: 340px;
-}
-.GlobalSettings .choosemodule {
-  border: 1px solid #333333;
-  display: inline-block;
-  width: 100px;
-  text-align: center;
-  cursor: pointer;
-  height: 40px;
-  line-height: 40px;
-  margin: 0 10px 5px 0px;
-}
-.GlobalSettings .choosemodule2 {
-  border: 1px solid #1890ff;
-  color: #1890ff;
-}
+
+
 </style>
 
