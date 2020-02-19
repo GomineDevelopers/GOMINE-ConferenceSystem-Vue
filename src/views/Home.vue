@@ -49,6 +49,7 @@ export default {
 .el-main {
   background: #fff;
   margin: 20px;
+  padding: 0;
 }
 </style>
 

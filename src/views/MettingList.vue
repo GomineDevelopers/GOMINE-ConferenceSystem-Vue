@@ -1,5 +1,5 @@
 <template>
-  <el-row class="height_auto">
+  <el-row class="height_auto metting_list">
     <div class="add_button">
       <el-button type="primary" size="small" icon="el-icon-plus">新增会务</el-button>
     </div>
@@ -78,6 +78,9 @@ export default {
 }
 </style>
 <style scoped>
+.metting_list {
+  padding: 20px;
+}
 .add_button {
   margin: 12px 0px;
 }
