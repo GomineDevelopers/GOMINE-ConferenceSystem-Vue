@@ -66,7 +66,7 @@ export default {
   },
   methods: {
     goIndex(row) {
-      this.$router.replace("/systemindex");
+      this.$router.replace("/globalsettings");
     }
   }
 };

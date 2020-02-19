@@ -54,9 +54,8 @@ export default new Router({
           path: "/systemindex",
           name: "SystemIndex",
           component: () => import("@/views/system/SystemIndex"),
-          redirect: "/allsetting",
+          redirect: "/globalsettings",
           children: [
-        
             {
               path: "/globalsettings",
               name: "GlobalSettings",
