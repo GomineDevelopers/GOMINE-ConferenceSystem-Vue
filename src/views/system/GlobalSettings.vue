@@ -4,7 +4,9 @@
     <div class="GS_content">
       <div class="perRow">
         <div class="inlineBlock_verTop pr_title">会议地址：</div>
-        <div class="inlineBlock_verTop pr_content">{{metting_address}}</div>
+        <div class="inlineBlock_verTop pr_content">
+          <div class="metting_address">{{metting_address}}</div>
+        </div>
       </div>
       <div class="perRow">
         <div class="inlineBlock_verTop pr_title">会议规格：</div>
@@ -387,14 +389,27 @@ export default {
 .GlobalSettings {
 }
 .GlobalSettings .perRow {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 .GlobalSettings .pr_title {
   width: 150px;
-  text-align: right;
+  /* text-align: right; */
+
+  height: 20px;
+  font-size: 14px;
+  font-family: PingFangTC;
+  line-height: 20px;
+  color: rgba(17, 26, 52, 1);
 }
 .GlobalSettings .pr_content {
   width: 300px;
+}
+.GlobalSettings .metting_address {
+  height: 20px;
+  font-size: 14px;
+  font-family: PingFangTC;
+  line-height: 20px;
+  color: rgba(149, 165, 186, 1);
 }
 .GlobalSettings .choosemodule_P {
   width: 340px;

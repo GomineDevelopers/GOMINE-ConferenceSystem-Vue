@@ -2,7 +2,7 @@
   <el-row class="height_auto flex">
     <el-row class="children_nav height_auto">
       <el-menu :default-active="$route.path" router class="el-menu-vertical-demo height_auto">
-        <el-menu-item index="/allsetting">
+        <el-menu-item index="/globalsettings">
           <!-- <img v-if="$route.path == '/login'" src="../assets/image/yy.png" />
           <img v-else src="../assets/image/yy1.png" />-->
           <span slot="title">整体设置</span>
