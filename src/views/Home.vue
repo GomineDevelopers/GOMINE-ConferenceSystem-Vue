@@ -38,6 +38,17 @@ export default {
 </script>
 <style scoped>
 .Home {
+  height: 100%;
+  overflow: hidden;
+}
+.el-aside,
+.el-container {
+  height: 100%;
+  background: #f9f9f9;
+}
+.el-main {
+  background: #fff;
+  margin: 20px;
 }
 </style>
 

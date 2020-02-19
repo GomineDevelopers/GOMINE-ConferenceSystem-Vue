@@ -1,29 +1,32 @@
 import Vue from "vue";
 import {
-    Button,
-    Input,
-    Select,
-    Option,
-    Row,
-    Col,
-    CheckboxGroup,
-    Checkbox,
-    Container,
-    Header,
-    Aside,
-    Main,
-    Menu,
-    submenu,
-    MenuItem,
-    MenuItemGroup,
-    MessageBox,
-    Message,
-    DatePicker,
-    Tabs,
-    TabPane,
-    TimePicker,
-    Upload,
-    Notification 
+  Button,
+  Input,
+  Select,
+  Option,
+  Row,
+  Col,
+  CheckboxGroup,
+  Checkbox,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Menu,
+  submenu,
+  MenuItem,
+  MenuItemGroup,
+  MessageBox,
+  Message,
+  DatePicker,
+  Tabs,
+  TabPane,
+  TimePicker,
+  Upload,
+  Notification,
+  Table,
+  TableColumn,
+  Tooltip
 } from "element-ui";
 Vue.use(Button);
 Vue.use(Input);
@@ -48,5 +51,8 @@ Vue.use(Tabs);
 Vue.use(TabPane);
 Vue.use(TimePicker);
 Vue.use(Upload);
+Vue.use(Table);
+Vue.use(TableColumn);
+Vue.use(Tooltip);
 
 Vue.prototype.$notify = Notification;

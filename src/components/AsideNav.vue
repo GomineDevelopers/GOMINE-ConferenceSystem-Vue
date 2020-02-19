@@ -1,7 +1,7 @@
 <template>
-  <el-row class="left_aside">
+  <el-row class="left_aside height_auto">
     <el-row class="header_logo">
-      <img class="img_logo" src="../assets/pic/logo.png" alt />
+      <img class="img_logo" src="../assets/image/logo.png" alt />
     </el-row>
     <el-menu
       :default-active="$route.path"
@@ -10,12 +10,12 @@
       active-text-color="#3399FF"
       unique-opened
     >
-      <el-menu-item index="/globalsettings">
-        <img v-if="$route.path == '/globalsettings'" src="../assets/image/yy.png" />
-        <img v-else src="../assets/image/yy1.png" />
-        <span slot="title">整体设置</span>
+      <el-menu-item index="/mettinglist">
+        <i v-if="$route.path == '/mettinglist'" class="el-icon-menu"></i>
+        <i v-else class="el-icon-menu"></i>
+        <span slot="title">会议管理</span>
       </el-menu-item>
-      <el-menu-item index="/login">
+      <!-- <el-menu-item index="/login">
         <img v-if="$route.path == '/login'" src="../assets/image/yy.png" />
         <img v-else src="../assets/image/yy1.png" />
         <span slot="title">登录</span>
@@ -84,7 +84,7 @@
           <el-menu-item index="/historyflowdirectory">核销</el-menu-item>
           <el-menu-item index="/incomedetail">奖金明细</el-menu-item>
         </el-menu-item-group>
-      </el-submenu>
+      </el-submenu>-->
     </el-menu>
   </el-row>
 </template>
@@ -111,25 +111,35 @@ export default {
 .left_aside .el-menu {
   border: none;
 }
-.left_aside .el-menu .el-menu-item {
-  border-left: 3px solid #fff;
-}
 .left_aside .el-menu .el-menu-item.is-active {
-  border-left: 3px solid #3399ff;
-  background: rgba(51, 153, 255, 0.06);
+  background: rgba(64, 158, 255, 1);
+}
+.left_aside .el-menu .el-menu-item.is-active i {
+  color: #fff;
+}
+.left_aside .el-menu .el-menu-item.is-active span {
+  color: #fff;
 }
 .left_aside .el-menu .el-icon-arrow-down {
   font-size: 16px;
 }
+.left_aside .el-menu .el-menu-item span {
+  font-size: 16px;
+}
+.left_aside .el-menu .el-menu-item i {
+  margin-right: 25px;
+  font-size: 22px;
+}
 </style>
 <style scoped>
 .img_logo {
-  width: 100%;
+  width: 192px;
 }
 .left_aside {
   background: #fff;
   height: 100%;
   z-index: 99;
+  overflow-y: auto;
 }
 .header_logo {
   font-weight: bold;
@@ -137,6 +147,9 @@ export default {
   text-align: center;
   height: 60px;
   line-height: 60px;
+  box-shadow: 0px 1px 0px rgba(149, 165, 186, 0.2);
+  z-index: 99;
+  border-right: 1px solid rgba(149, 165, 186, 0.2);
 }
 .el-menu-vertical-demo {
   overflow-y: auto;

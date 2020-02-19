@@ -1,15 +1,13 @@
 <template>
   <el-row class="TopHeader top_header">
     <el-row class="header_top">
-      <div class="textAlignCenter_w100p SystemTitle">会务系统生成后台设置系统</div>
-      <!-- 
       <span>
         <img src="https://img.yzcdn.cn/vant/cat.jpeg" />
         <i class="el-icon-arrow-down iconSize"></i>
       </span>
       <span class="logout_btn" @click="logout" title="退出登录">
         <i class="el-icon-setting iconSize"></i>退出
-      </span>-->
+      </span>
     </el-row>
   </el-row>
 </template>
@@ -50,22 +48,27 @@ export default {
   }
 };
 </script>
+<style>
+.el-header{
+  padding:0;
+}
+</style>
 <style scoped>
+
 .iconSize {
   font-size: 0.12rem;
 }
 .top_header {
   background-color: #fff;
   line-height: 60px;
-  /* display: -webkit-flex; */
-  /* display: flex; */
-  /* justify-content: flex-end; */
 }
 .header_top {
   height: 60px;
+  padding-right:40px;
   display: -webkit-flex;
   display: flex;
-  text-align: center;
+  justify-content: flex-end;
+  box-shadow:0px 1px 0px rgba(149,165,186,0.2);
 }
 .header_top span {
   height: 60px;

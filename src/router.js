@@ -17,8 +17,8 @@ Vue.use(Router);
 // 会务日程 - ConferenceSchedule
 // 新增会务 - NewConference
 // 调查问卷 - Questionnaire
-// 资料下载 - DataDownload 
-// 联系我们 - ConnectUs 
+// 资料下载 - DataDownload
+// 联系我们 - ConnectUs
 // 个人中心 - PersonalCenter
 // 报表 - ReportForms
 
@@ -41,9 +41,13 @@ export default new Router({
       path: "/",
       name: "home",
       component: () => import("@/views/Home"),
-      redirect: "/globalsettings",
+      redirect: "/mettinglist",
       children: [
-
+        {
+          path: "/mettinglist",
+          name: "MettingList",
+          component: () => import("@/views/MettingList")
+        },
         {
           path: "/globalsettings",
           name: "GlobalSettings",
@@ -84,7 +88,7 @@ export default new Router({
           name: "ConferenceSchedule",
           component: () => import("@/views/system/ConferenceSchedule")
         },
-        {  // 
+        {  //
           path: "/newconference",
           name: "NewConference",
           component: () => import("@/views/system/NewConference")
