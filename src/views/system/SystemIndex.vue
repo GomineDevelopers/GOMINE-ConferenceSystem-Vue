@@ -122,19 +122,24 @@ export default {
 }
 .header_nav_top_p {
   width: 200px;
-  height: 600px;
+  height: 800px;
 }
 .header_nav_top {
   padding-top: 32px;
   border-right: solid 1px #f5f4f6;
   width: 200px;
   /* height: 100vh; */
-  /* position: fixed; */
-  position: relative;
+  position: fixed;
+  /* position: relative; */
+  /* position: absolute; */
   height: 760px;
 }
 .header_content_top {
   padding-top: 32px;
+  height: 100%;
+  width: 1430px;
+  left: 200px;
+  position: absolute;
 }
 
 .header_top {
