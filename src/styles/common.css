@@ -50,6 +50,7 @@ table {
 .height_auto {
   height: 100%;
 }
+
 .main_list table td i {
   font-size: 18px;
   padding: 3px 8px;
@@ -61,4 +62,10 @@ table {
 }
 .main_list table td i.delete {
   color: #fc4850;
+}
+.position_re {
+  position: relative;
+}
+.overflow_hidden {
+  overflow: hidden;
 }

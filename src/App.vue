@@ -39,13 +39,12 @@ export default {
   /* font-size: 28px; */
   /* width: 7.5rem; */
   font-size: 14px;
-
 }
 
-@media screen and (max-width: 1700px) {
+/* @media screen and (max-width: 1700px) {
   #app {
     width: 1640px;
     overflow-x: scroll;
   }
-}
+} */
 </style>

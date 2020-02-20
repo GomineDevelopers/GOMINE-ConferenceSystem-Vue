@@ -1,7 +1,7 @@
 <template>
-  <div class="GlobalSettings">
+  <div class="GlobalSettings height_auto position_re overflow_hidden">
     <vue-headful title="整体设置"></vue-headful>
-    <div class="GS_content">
+    <div class="GS_content height_calc">
       <div class="perRowCom">
         <div class="pr_titleCom">会议地址：</div>
         <div class="pr_contentCom">
@@ -126,7 +126,6 @@
         <el-button>重置</el-button>
       </div>
     </div>
-
   </div>
 </template>
 <script>
@@ -388,12 +387,13 @@ export default {
   bottom: 0;
   left: 25%;
   width: 50%;
-  color: #C5C9D7;
+  color: #c5c9d7;
 }
 </style>
 <style scoped>
 .GlobalSettings {
   width: 100%;
+  position: relative;
 }
 .GlobalSettings .metting_address {
   height: 20px;
@@ -402,7 +402,5 @@ export default {
   line-height: 20px;
   color: rgba(149, 165, 186, 1);
 }
-
-
 </style>
 
