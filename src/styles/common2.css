@@ -124,7 +124,7 @@
   border-top: solid 1px #F5F4F6;
 
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
 
   height: 60px;
