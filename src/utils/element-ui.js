@@ -30,7 +30,8 @@ import {
   ColorPicker,
   Dialog,
   Form,
-  FormItem
+  FormItem,
+  Radio
 } from "element-ui";
 Vue.use(Button);
 Vue.use(Input);
@@ -63,3 +64,4 @@ Vue.use(ColorPicker);
 Vue.use(Dialog);
 Vue.use(Form);
 Vue.use(FormItem);
+Vue.use(Radio);
