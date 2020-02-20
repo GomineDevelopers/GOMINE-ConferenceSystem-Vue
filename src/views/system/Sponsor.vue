@@ -30,7 +30,7 @@
             <div class="input_all">
               <div class="inlineBlockP_verTop input_top">
                 <div>
-                  <div class="small_title inlineBlock_verTop">公司名：</div>
+                  <div class="small_title inlineBlock_verTop small_title2">公司名：</div>
                   <div class="inlineBlock_verTop it_1">
                     <el-input v-model="BaseArr[index].name" placeholder="请输入公司名"></el-input>
                   </div>
@@ -44,7 +44,7 @@
               </div>
               <div class="input_bottom">
                 <div>
-                  <div class="small_title inlineBlock_verTop">内容：</div>
+                  <div class="small_title inlineBlock_verTop small_title2">内容：</div>
                   <div class="inlineBlock_verTop it_4">
                     <el-input
                       type="textarea"
@@ -204,11 +204,11 @@ export default {
 }
 /* ****** input 相关 */
 .Sponsor .it_1 .el-input__inner {
-  width: 130px;
+  width: 300px;
   margin-right: 38px;
 }
 .Sponsor .it_2 .el-input__inner {
-  width: 200px;
+  width: 300px;
   margin-right: 38px;
 }
 
@@ -256,6 +256,9 @@ export default {
   height: 40px;
   line-height: 40px;
   margin-right: 16px;
+}
+.Sponsor .small_title2{
+  width: 56px;
 }
 .Sponsor .AddAndSubstract_p2 {
   padding-top: 40px;

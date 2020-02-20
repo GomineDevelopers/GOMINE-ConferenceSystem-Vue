@@ -29,7 +29,7 @@
       <div class="perRowCom">
         <div class="pr_titleCom">会议地点：</div>
         <div class="pr_contentCom">
-          <el-input v-model="meeting_address" placeholder="请输入会议地点"></el-input>
+          <el-input class="pos_input" v-model="meeting_address" placeholder="请输入会议地点"></el-input>
         </div>
       </div>
       <!-- 
@@ -252,6 +252,10 @@ export default {
   left: 25%;
   width: 50%;
   color: #c5c9d7;
+}
+/* ***** 输入框 */
+.MeetingBackground .pos_input .el-input__inner {
+  width: 203px;
 }
 </style>
 <style scoped>
