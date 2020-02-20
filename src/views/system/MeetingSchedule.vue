@@ -1,8 +1,8 @@
 <template>
   <div class="MeetingSchedule">
     <vue-headful title="会议日程"></vue-headful>
-    <div class="block">
-      <span>选择日期：</span>
+    <div class="block fontSize0">
+      <div class="ms_title inlineBlock_verTop">会议时间：</div>
       <el-date-picker
         v-model="time.value1"
         type="daterange"
@@ -12,7 +12,7 @@
         @change="DateChoose($event,'test')"
       ></el-date-picker>
     </div>
-    <div :style="{height: '24px'}"></div>
+    <div :style="{height: '32px'}"></div>
 
     <div class="ms_content">
       <el-tabs v-model="activeName" @tab-click="handleClick">
@@ -28,35 +28,37 @@
               <template v-for="(itemC,indexC) in item.contentArr ">
                 <div :key="indexC + 'content' ">
                   <div class="inlineBlockP perFont">
-                    <div>选择时间:</div>
-                    <div>
+                    <div class="content_font">开始时间：</div>
+                    <div class="picker_input">
                       <el-time-picker v-model="itemC.startTime" placeholder="任意时间点"></el-time-picker>
                     </div>
-                    <div>- 选择时间:</div>
-                    <div>
+                    <div class="content_font">- 结束时间：</div>
+                    <div class="picker_input">
                       <el-time-picker v-model="itemC.endTime" placeholder="任意时间点"></el-time-picker>
                     </div>
-                    <div>主题：</div>
+                    <div class="content_font">主题：</div>
                     <div>
-                      <el-select v-model="itemC.theme" placeholder="请选择主题">
+                      <el-input class="m_color" v-model="itemC.theme" placeholder="请选择或输入颜色"></el-input>
+                      <!-- <el-select v-model="itemC.theme" placeholder="请选择主题">
                         <el-option
                           v-for="itemOT in optionsTheme"
                           :key="itemOT.value"
                           :label="itemOT.label"
                           :value="itemOT.value"
                         ></el-option>
-                      </el-select>
+                      </el-select>-->
                     </div>
-                    <div>副标题：</div>
+                    <div class="content_font">演讲人：</div>
                     <div>
-                      <el-select v-model="itemC.subhead" placeholder="请选择副标题">
+                      <el-input class="m_color" v-model="itemC.subhead" placeholder="请选择或输入颜色"></el-input>
+                      <!-- <el-select v-model="itemC.subhead" placeholder="请选择副标题">
                         <el-option
                           v-for="itemOS in optionsSubhead"
                           :key="itemOS.value"
                           :label="itemOS.label"
                           :value="itemOS.value"
                         ></el-option>
-                      </el-select>
+                      </el-select>-->
                     </div>
                     <div>
                       <i @click="AddDateData(index,indexC)" class="el-icon-circle-plus"></i>
@@ -314,6 +316,13 @@ export default {
   }
 };
 </script>
+<style >
+.MeetingSchedule .picker_input .el-date-editor.el-input,
+.MeetingSchedule .picker_input .el-date-editor.el-input__inner {
+  width: 145px;
+  margin-right: 10px;
+}
+</style>
 <style scoped>
 .MeetingSchedule {
 }
@@ -321,6 +330,23 @@ export default {
   font-size: 16px;
   margin-bottom: 15px;
   line-height: 60px;
+}
+.MeetingSchedule .ms_title {
+  width: 80px;
+  height: 40px;
+  font-size: 14px;
+  font-family: PingFangTC;
+  line-height: 40px;
+  color: rgb(138, 150, 185);
+}
+.MeetingSchedule .content_font {
+  
+  height: 20px;
+  font-size: 14px;
+  font-family: PingFangTC;
+  line-height: 20px;
+  color: rgba(17, 26, 52, 1);
+  margin-right: 10px;
 }
 </style>
 
