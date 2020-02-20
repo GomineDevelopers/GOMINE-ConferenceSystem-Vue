@@ -42,4 +42,10 @@ export default {
 
 }
 
+@media screen and (max-width: 1700px) {
+  #app {
+    width: 1640px;
+    overflow-x: scroll;
+  }
+}
 </style>

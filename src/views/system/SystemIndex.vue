@@ -2,7 +2,7 @@
   <div class="SystemIndex">
     <el-row class="system_index height_auto flex">
       <div class="header_nav_top_p">
-        <el-row class="height_auto header_nav_top">
+        <el-row class="header_nav_top">
           <el-menu :default-active="$route.path" router class="el-menu-vertical-demo height_auto">
             <el-menu-item index="/globalsettings">
               <!-- <img v-if="$route.path == '/login'" src="../assets/image/yy.png" />
@@ -118,20 +118,30 @@ export default {
 
 .system_bdy {
   overflow-y: auto;
+  /* overflow: scroll; */
 }
 .header_nav_top_p {
   width: 200px;
+  height: 800px;
 }
 .header_nav_top {
   padding-top: 32px;
   border-right: solid 1px #f5f4f6;
   width: 200px;
-  height: 100vh;
+  /* height: 100vh; */
   position: fixed;
+  /* position: relative; */
+  /* position: absolute; */
+  height: 760px;
 }
 .header_content_top {
   padding-top: 32px;
+  height: 100%;
+  width: 1430px;
+  left: 200px;
+  position: absolute;
 }
+
 .header_top {
   height: 28px;
   font-size: 20px;

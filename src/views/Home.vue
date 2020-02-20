@@ -1,11 +1,11 @@
 <template>
   <div class="Home">
     <vue-headful title="首页"></vue-headful>
-    <el-container>
+    <el-container >
       <el-aside width="240px">
         <AsideNav></AsideNav>
       </el-aside>
-      <el-container>
+      <el-container >
         <el-header>
           <TopHeader></TopHeader>
         </el-header>
@@ -56,5 +56,6 @@ export default {
   margin-bottom: 0px;
 
 }
+
 </style>
 
