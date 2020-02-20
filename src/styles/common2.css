@@ -1,55 +1,49 @@
-
-
-
-
-
-.textAlignCenter_w100{
-    text-align: center;
-    width:100vw;
+.textAlignCenter_w100 {
+  text-align: center;
+  width: 100vw;
 }
-.textAlignCenter_w100p{
-    text-align: center;
-    width:100%;
+.textAlignCenter_w100p {
+  text-align: center;
+  width: 100%;
 }
-.textAlignCenter{
-    text-align: center;
+.textAlignCenter {
+  text-align: center;
 }
-.fontSize0{
+.fontSize0 {
   font-size: 0;
 }
-.inlineBlock{
-    display:inline-block ;
+.inlineBlock {
+  display: inline-block;
 }
 
-.inlineBlockP > div{
-    display:inline-block ;
+.inlineBlockP > div {
+  display: inline-block;
 }
-.inlineBlockP_verTop > div{
-  display:inline-block ;
+.inlineBlockP_verTop > div {
+  display: inline-block;
   vertical-align: top;
 }
-.blockB_floatL{
+.blockB_floatL {
   display: block;
   float: left;
 }
-.inlineBlock_verTop{
-  display:inline-block ;
+.inlineBlock_verTop {
+  display: inline-block;
   vertical-align: top;
 }
 
-.verticalAlignTop{
+.verticalAlignTop {
   vertical-align: top;
 }
 
-.w100{
+.w100 {
   width: 100%;
 }
 
 /* ***** */
-.m_test{
+.m_test {
   font-size: 6.7rem;
 }
-
 
 /* ********************* */
 
@@ -114,18 +108,27 @@
   border: 1px solid #1890ff;
   color: #1890ff;
 }
-.choosemodule3Com{
+.choosemodule3Com {
   margin: 0 16px 0px 0px;
+}
+
+/* 固定定位上面一块计算高度 */
+.height_calc {
+  padding-left: 32px;
+  height: calc(100% - 60px);
+  overflow-y: auto;
 }
 /* *********** 提交与重置  fixed 统一样式 */
 .flex_submit_p {
   /* background-color: red; */
   background-color: #ffffff;
-  border-top: solid 1px #F5F4F6;
+  border-top: solid 1px #f5f4f6;
 
   width: 100%;
-  position: fixed;
-  /* position: absolute; */
+  /* position: fixed; */
+  position: absolute;
+  left: 0;
+  right: 0;
   bottom: 0;
 
   height: 60px;
@@ -136,9 +139,6 @@
   background-color: #ffffff;
   /* text-align: center; */
 }
-.btn_submit{
+.btn_submit {
   margin-right: 16px;
 }
-
-
-
