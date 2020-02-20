@@ -27,7 +27,10 @@ import {
   Table,
   TableColumn,
   Tooltip,
-  ColorPicker
+  ColorPicker,
+  Dialog,
+  Form,
+  FormItem
 } from "element-ui";
 Vue.use(Button);
 Vue.use(Input);
@@ -57,3 +60,6 @@ Vue.use(TableColumn);
 Vue.use(Tooltip);
 Vue.prototype.$notify = Notification;
 Vue.use(ColorPicker);
+Vue.use(Dialog);
+Vue.use(Form);
+Vue.use(FormItem);
