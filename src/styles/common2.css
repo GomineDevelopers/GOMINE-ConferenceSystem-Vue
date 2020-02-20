@@ -133,6 +133,7 @@
 
   height: 60px;
   line-height: 60px;
+  padding-left: 32px;
 }
 .flex_submit {
   /* width: 70%; */
@@ -141,4 +142,17 @@
 }
 .btn_submit {
   margin-right: 16px;
+}
+
+/* *** 增减按钮 */
+.AddAndSubstract_p{
+  height: 100%;
+  line-height: 100%;
+}
+.el-icon-circle-plus{
+  font-size: 20px;
+    margin-right: 10px;
+}
+.el-icon-remove{
+  font-size: 20px;
 }

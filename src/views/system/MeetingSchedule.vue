@@ -1,20 +1,19 @@
 <template>
-  <div class="MeetingSchedule">
+  <div class="MeetingSchedule height_auto position_re">
     <vue-headful title="会议日程"></vue-headful>
-    <div class="block fontSize0">
-      <div class="ms_title inlineBlock_verTop">会议时间：</div>
-      <el-date-picker
-        v-model="time.value1"
-        type="daterange"
-        range-separator="至"
-        start-placeholder="开始日期"
-        end-placeholder="结束日期"
-        @change="DateChoose($event,'test')"
-      ></el-date-picker>
-    </div>
-    <div :style="{height: '32px'}"></div>
-
-    <div class="ms_content">
+    <div class="ms_content height_calc">
+      <div class="block fontSize0">
+        <div class="ms_title inlineBlock_verTop">会议时间：</div>
+        <el-date-picker
+          v-model="time.value1"
+          type="daterange"
+          range-separator="至"
+          start-placeholder="开始日期"
+          end-placeholder="结束日期"
+          @change="DateChoose($event,'test')"
+        ></el-date-picker>
+      </div>
+      <div :style="{height: '32px'}"></div>
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <template v-for="(item,index) in DateArr ">
           <el-tab-pane :key="index + 'date' " :label="item.date" :name="String(index)">
@@ -36,9 +35,9 @@
                     <div class="picker_input">
                       <el-time-picker v-model="itemC.endTime" placeholder="任意时间点"></el-time-picker>
                     </div>
-                    <div class="content_font">主题：</div>
-                    <div>
-                      <el-input class="m_color" v-model="itemC.theme" placeholder="请选择或输入颜色"></el-input>
+                    <div class="content_font content_font2">主题：</div>
+                    <div class="text_input">
+                      <el-input class="m_color" v-model="itemC.theme" placeholder="请输入主题"></el-input>
                       <!-- <el-select v-model="itemC.theme" placeholder="请选择主题">
                         <el-option
                           v-for="itemOT in optionsTheme"
@@ -49,8 +48,8 @@
                       </el-select>-->
                     </div>
                     <div class="content_font">演讲人：</div>
-                    <div>
-                      <el-input class="m_color" v-model="itemC.subhead" placeholder="请选择或输入颜色"></el-input>
+                    <div class="text_input">
+                      <el-input class="m_color" v-model="itemC.subhead" placeholder="请输入演讲人"></el-input>
                       <!-- <el-select v-model="itemC.subhead" placeholder="请选择副标题">
                         <el-option
                           v-for="itemOS in optionsSubhead"
@@ -60,7 +59,7 @@
                         ></el-option>
                       </el-select>-->
                     </div>
-                    <div>
+                    <div class="AddAndSubstract_p AddAndSubstract_p2">
                       <i @click="AddDateData(index,indexC)" class="el-icon-circle-plus"></i>
                       <i @click="SubtractDateData(index,indexC)" class="el-icon-remove"></i>
                     </div>
@@ -73,9 +72,12 @@
       </el-tabs>
     </div>
 
-    <div class="textAlignCenter_w100p">
-      <el-button type="primary">提交</el-button>
-      <el-button>重置</el-button>
+    <div :style="{height: '80px'}"></div>
+    <div class="flex_submit_p">
+      <div class="flex_submit">
+        <el-button class="btn_submit" type="primary">提交</el-button>
+        <el-button>重置</el-button>
+      </div>
     </div>
   </div>
 </template>
@@ -320,7 +322,11 @@ export default {
 .MeetingSchedule .picker_input .el-date-editor.el-input,
 .MeetingSchedule .picker_input .el-date-editor.el-input__inner {
   width: 145px;
-  margin-right: 10px;
+  margin-right: 20px;
+}
+.MeetingSchedule .text_input .el-input {
+  width: 200px;
+  margin-right: 20px;
 }
 </style>
 <style scoped>
@@ -340,13 +346,18 @@ export default {
   color: rgb(138, 150, 185);
 }
 .MeetingSchedule .content_font {
-  
   height: 20px;
   font-size: 14px;
   font-family: PingFangTC;
   line-height: 20px;
   color: rgba(17, 26, 52, 1);
   margin-right: 10px;
+}
+.MeetingSchedule .content_font2 {
+  margin-left: 20px;
+}
+.MeetingSchedule .AddAndSubstract_p2{
+  /* padding-top: 5px; */
 }
 </style>
 

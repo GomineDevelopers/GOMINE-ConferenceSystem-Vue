@@ -1,7 +1,7 @@
 <template>
-  <div class="MeetingBackground">
+  <div class="MeetingBackground height_auto position_re">
     <vue-headful title="会议背景"></vue-headful>
-    <div class="mb_content">
+    <div class="mb_content height_calc">
       <div class="perRowCom">
         <div class="pr_titleCom">会议背景：</div>
         <div class="pr_contentCom">

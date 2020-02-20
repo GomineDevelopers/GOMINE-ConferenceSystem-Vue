@@ -1,7 +1,7 @@
 <template>
-  <div class="MainMenu">
+  <div class="MainMenu height_auto position_re">
     <vue-headful title="登录"></vue-headful>
-    <div class="GS_content">
+    <div class="MM_content height_calc">
       <div class="perRowCom">
         <div class="pr_titleCom">LOGO位置：</div>
         <div class="pr_contentCom">
