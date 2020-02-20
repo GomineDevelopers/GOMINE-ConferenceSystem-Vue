@@ -1,5 +1,5 @@
 <template>
-  <div class="GlobalSettings height_auto position_re overflow_hidden">
+  <div class="GlobalSettings height_auto position_re">
     <vue-headful title="整体设置"></vue-headful>
     <div class="GS_content height_calc">
       <div class="perRowCom">
