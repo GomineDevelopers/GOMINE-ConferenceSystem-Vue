@@ -118,7 +118,7 @@ export default {
 
 .system_bdy {
   overflow-y: auto;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 .header_nav_top_p {
   width: 200px;
