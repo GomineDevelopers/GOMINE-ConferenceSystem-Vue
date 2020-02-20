@@ -183,7 +183,7 @@ export default {
   height: 32px;
 }
 .question_item {
-  background: #f4f7fc;
+  background: rgba(244, 247, 252, 0.4);
   padding-left: 16px;
   position: relative;
 }
