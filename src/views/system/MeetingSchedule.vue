@@ -31,10 +31,12 @@
                     <div class="picker_input">
                       <el-time-picker v-model="itemC.startTime" placeholder="任意时间点"></el-time-picker>
                     </div>
+                    <div class="media_manage2" :style="{height: '1px'}"></div>
                     <div class="content_font">- 结束时间：</div>
                     <div class="picker_input">
                       <el-time-picker v-model="itemC.endTime" placeholder="任意时间点"></el-time-picker>
                     </div>
+                    <div class="media_manage1" :style="{height: '1px'}"></div>
                     <div class="content_font content_font2">主题：</div>
                     <div class="text_input">
                       <el-input class="m_color" v-model="itemC.theme" placeholder="请输入主题"></el-input>
@@ -47,6 +49,7 @@
                         ></el-option>
                       </el-select>-->
                     </div>
+                    <div class="media_manage2" :style="{height: '1px'}"></div>
                     <div class="content_font">演讲人：</div>
                     <div class="text_input">
                       <el-input class="m_color" v-model="itemC.subhead" placeholder="请输入演讲人"></el-input>
@@ -352,12 +355,32 @@ export default {
   line-height: 20px;
   color: rgba(17, 26, 52, 1);
   margin-right: 10px;
+  width: 82px;
+  text-align: right;
 }
 .MeetingSchedule .content_font2 {
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
-.MeetingSchedule .AddAndSubstract_p2{
+.MeetingSchedule .AddAndSubstract_p2 {
   /* padding-top: 5px; */
+}
+
+/* *************** 自适应相关 */
+.MeetingSchedule .media_manage1 {
+  display: none;
+}
+.MeetingSchedule .media_manage2 {
+  display: none;
+}
+@media screen and (max-width: 1700px) {
+  .MeetingSchedule .media_manage1 {
+    display: inherit;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .MeetingSchedule .media_manage2 {
+    display: inherit;
+  }
 }
 </style>
 

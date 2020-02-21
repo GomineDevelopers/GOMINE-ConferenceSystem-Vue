@@ -10,7 +10,7 @@
       <div class="ba_background_p" v-if="BaseArr.length != 0">
         <template v-for="(item,index) in BaseArr ">
           <div class="ba_background perRow inlineBlockP_verTop ba_pos" :key="index + 'ba' ">
-            <div class="img_title">LOGO：</div>
+            <div class="small_title">LOGO：</div>
             <div class="upload_img">
               <el-upload
                 class="avatar-uploader"
@@ -26,15 +26,17 @@
                 <i v-else class="el-icon-plus avatar-uploader-icon"></i>
               </el-upload>
             </div>
+            <div class="media_manage1" :style="{height: '18px'}"></div>
 
             <div class="input_all">
               <div class="inlineBlockP_verTop input_top">
                 <div>
-                  <div class="small_title inlineBlock_verTop small_title2">公司名：</div>
+                  <div class="small_title inlineBlock_verTop">公司名：</div>
                   <div class="inlineBlock_verTop it_1">
                     <el-input v-model="BaseArr[index].name" placeholder="请输入公司名"></el-input>
                   </div>
                 </div>
+                <div class="media_manage2" :style="{height: '18px'}"></div>
                 <div>
                   <div class="small_title inlineBlock_verTop">网址：</div>
                   <div class="inlineBlock_verTop it_2">
@@ -44,7 +46,7 @@
               </div>
               <div class="input_bottom">
                 <div>
-                  <div class="small_title inlineBlock_verTop small_title2">内容：</div>
+                  <div class="small_title inlineBlock_verTop">内容：</div>
                   <div class="inlineBlock_verTop it_4">
                     <el-input
                       type="textarea"
@@ -205,11 +207,11 @@ export default {
 /* ****** input 相关 */
 .Sponsor .it_1 .el-input__inner {
   width: 300px;
-  margin-right: 38px;
+  margin-right: 5px;
 }
 .Sponsor .it_2 .el-input__inner {
   width: 300px;
-  margin-right: 38px;
+  margin-right: 5px;
 }
 
 .Sponsor .it_4 .el-textarea__inner {
@@ -218,6 +220,18 @@ export default {
   color: #606266;
   font-size: 14px;
   font-family: Arial;
+}
+@media screen and (max-width: 1600px) {
+  .Sponsor .ba_pos {
+    min-width: 550px;
+  }
+  .Sponsor .it_4 .el-textarea__inner {
+    width: 200%;
+    min-height: 33px;
+    color: #606266;
+    font-size: 14px;
+    font-family: Arial;
+  }
 }
 </style>
 <style scoped>
@@ -234,9 +248,7 @@ export default {
   /* height: 100px; */
   padding: 30px 0 32px 12px;
 }
-.Sponsor .img_title {
-  width: 58px;
-}
+
 .Sponsor .upload_img {
   width: 141px;
 }
@@ -256,12 +268,29 @@ export default {
   height: 40px;
   line-height: 40px;
   margin-right: 16px;
+  width: 82px;
+  text-align: right;
 }
-.Sponsor .small_title2{
-  width: 56px;
-}
+
 .Sponsor .AddAndSubstract_p2 {
   padding-top: 40px;
+}
+/* *************** 自适应相关 */
+.Sponsor .media_manage1 {
+  display: none;
+}
+.Sponsor .media_manage2 {
+  display: none;
+}
+@media screen and (max-width: 1800px) {
+  .Sponsor .media_manage1 {
+    display: inherit;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .Sponsor .media_manage2 {
+    display: inherit;
+  }
 }
 </style>
 
