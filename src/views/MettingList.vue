@@ -111,27 +111,6 @@ export default {
   color: #858b9c;
   font-size: 14px;
 }
-.metting_list .el-dialog {
-  margin-top: 30vh !important;
-  width: 600px !important;
-}
-.el-dialog__header {
-  border-bottom: 1px solid #f0f0f0;
-  padding: 0 20px;
-  height: 53px;
-  line-height: 53px;
-}
-.el-dialog__footer {
-  border-top: 1px solid #f0f0f0;
-  padding: 0 20px;
-  height: 56px;
-  line-height: 56px;
-  text-align: left;
-}
-.el-dialog__title {
-  font-size: 16px;
-  color: #111a34;
-}
 .metting_list .el-dialog .el-input,
 .metting_list .el-dialog .el-input__inner {
   width: 223px;

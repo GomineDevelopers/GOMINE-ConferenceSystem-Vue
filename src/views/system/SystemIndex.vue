@@ -70,7 +70,6 @@
           </el-menu-item>
         </el-menu>
       </el-row>
-
       <el-row class="system_bdy height_auto flex_1">
         <div class="header_top">{{router_name}}</div>
         <div class="router_content">
@@ -141,11 +140,15 @@ export default {
   line-height: 28px;
   color: rgba(17, 26, 52, 1);
   font-weight: bold;
-
+  padding-top: 32px;
   padding-bottom: 10px;
   padding-left: 32px;
 }
+.system_bdy {
+  width: calc(100% - 200px);
+  /* overflow: hidden; */
+}
 .router_content {
-  height: calc(100% - 38px);
+  height: calc(100% - 70px);
 }
 </style>
